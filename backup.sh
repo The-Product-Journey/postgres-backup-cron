@@ -17,7 +17,7 @@ pg_dump_database() {
 }
 
 upload_to_bucket() {
-    s3 cp - "s3://$BUCKET/$(date +%Y/%m/%d/backup-%H-%M-%S.sql.gz)"
+    s3 cp - "$BUCKET/$(date +%Y/%m/%d/backup-%H-%M-%S.sql.gz)"
 }
 
 main() {
